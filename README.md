@@ -60,3 +60,9 @@ After setting up the database, start the Flask development server:
 flask run
 ```
 The application should now be running on http://127.0.0.1:5000/.
+
+## Few screenshots of website:
+![image](https://github.com/user-attachments/assets/e66d27d2-e053-40f4-b378-5b7f627251f7)
+![image](https://github.com/user-attachments/assets/8606858c-cc3e-45e3-85f4-22e646c9c031)
+
+
