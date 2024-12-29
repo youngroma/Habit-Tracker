@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Habit Tracker</title>
+</head>
+<body>
+    <h1>Habit Progress</h1>
+    <p>
+   <a href="/dashboard">Back to Dashboard</a>
+    </p>
+    <form action="/repeat_habit" method="POST">
+        <input type="hidden" name="habit_id" value="{{ habit_id }}">
+        <button type="submit">Add New Point</button>
+    </form>
+
+    <h2>Habit Growth Graph</h2>
+    {% if img_base64 %}
+        <img src="data:image/png;base64,{{ img_base64 }}" alt="Habit Growth Graph">
+    {% else %}
+        <p>No habit progress yet.</p>
+    {% endif %}
+</body>
+</html>
