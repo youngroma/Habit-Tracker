@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+</head>
+<body>
+    <header>
+        <h1>Welcome, {{ current_user.username }}</h1>
+        <nav>
+            <a href="{{ url_for('add_habit') }}">Add Habit</a> |
+            <a href="{{ url_for('logout') }}">Logout</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Your Habits</h2>
+        <ul>
+            {% for habit in habits %}
+                <li>
+                    {{ habit.name }}
+                    <a href="{{ url_for('habit_graph', habit_id=habit.id) }}">View Graph</a>
+                </li>
+            {% endfor %}
+        </ul>
+    </main>
+</body>
+</html>
